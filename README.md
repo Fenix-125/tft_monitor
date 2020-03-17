@@ -3,7 +3,16 @@
 **TFT Monitor project** is aimed to receive **float value** (rotation speed), over **UART** with validation protocol visualize the, on a custom background image, using **TFT 2.8 SPI 240x320 v1.2** display and **DOIT ESP32 DevKit v1** board.
 
 ## Pin Layout
-
+```
+// pins for ESP32 DOIT Dev Kit v1 (30 pins)
+#define TFT_CLK 26
+#define TFT_MISO 25
+#define TFT_MOSI 27
+#define TFT_DC 14
+#define TFT_CS 13
+#define TFT_RST 12
+// #define TFT_LED V3.3
+```
 ![photo_2020-03-18_00-29-11](https://user-images.githubusercontent.com/44115554/76907745-af6dde00-68af-11ea-9141-98c9ea1899ea.jpg)
 
 ## Installation
