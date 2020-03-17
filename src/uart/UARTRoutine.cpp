@@ -6,7 +6,8 @@
 #include "uart/UARTRoutine.h"
 
 void UARTRoutine::init() {
-    uart_serial.begin(9600);
+    uart_serial.begin(9600, SERIAL_8N1, rx, tx);
+    while (!uart_serial) {}
 }
 
 void UARTRoutine::process() {
@@ -18,23 +19,21 @@ void UARTRoutine::process() {
     while ((tmp_byte = uart_serial.read()) != -1) {
         switch (state) {
             case ProtocolState::WAIT:
-                if (is_protocol_init((uint8_t) tmp_byte))
+                if (is_protocol_init((uint8_t) tmp_byte)) {
                     state = ProtocolState::RECEIVE_DATA;
+                }
                 break;
 
             case ProtocolState::RECEIVE_DATA:
                 push_byte(tmp_byte);
                 if (is_full_buffer()) {
-                    state = ProtocolState::RECEIVE_DATA;
+                    if (is_valid_data(buffer)) {
+                        update_data(extract_float2_protocol(buffer));
+                    }
+                    flash_buffer();
+                    state = ProtocolState::WAIT;
+                    return;
                 }
-
-            case ProtocolState::PROCESS_DATA:
-
-                if (is_valid_data(buffer)) {
-                    update_data(extract_float2_protocol(buffer));
-                }
-                flash_buffer();
-                state = ProtocolState::WAIT;
                 break;
         }
     }
@@ -46,6 +45,7 @@ bool UARTRoutine::available() {
 }
 
 float UARTRoutine::get_data() {
+    new_data = false;
     return current_data;
 }
 

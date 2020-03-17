@@ -11,6 +11,8 @@
 #include <Fonts/FreeSans24pt7b.h>
 #include "uart/UARTRoutine.h"
 
+#define DISPLAY_UPDATE_DELAY 1000
+
 
 static Adafruit_ILI9341 tft = Adafruit_ILI9341(TFT_CS, TFT_DC, TFT_MOSI, TFT_CLK, TFT_RST, TFT_MISO);
 static UARTRoutine uart_routine{UART_RX_PIN, UART_TX_PIN};
@@ -40,21 +42,18 @@ void setup() {
     tft.setFont(&FreeSans24pt7b);
 
     uart_routine.init();
+    print_measure(tft, measure);
 }
 
 
 void loop() {
-//    static float dx = 1.3;
-//    if ((measure.num > 12.23 && dx > 0) || (measure.num < -12.23 && dx < 0)) {
-//        dx = -dx;
-//    }
-//    measure.num += dx;
-
+    static unsigned long tmp_time = millis();
     uart_routine.process();
     if (uart_routine.available()) {
-        measure.num = uart_routine.get_data();
+        if (millis() - tmp_time > DISPLAY_UPDATE_DELAY) {
+            measure.num = uart_routine.get_data();
+            print_measure(tft, measure);
+            tmp_time = millis();
+        }
     }
-
-    print_measure(tft, measure);
-    delay(1000);
 }
