@@ -1,0 +1,15 @@
+/home/fenix/pr/work/tft_monitor/cmake-build-esp32doit-devkit-v1/CMakeFiles/edit_cache.dir
+/home/fenix/pr/work/tft_monitor/cmake-build-esp32doit-devkit-v1/CMakeFiles/Z_DUMMY_TARGET.dir
+/home/fenix/pr/work/tft_monitor/cmake-build-esp32doit-devkit-v1/CMakeFiles/rebuild_cache.dir
+/home/fenix/pr/work/tft_monitor/cmake-build-esp32doit-devkit-v1/CMakeFiles/PLATFORMIO_REBUILD_PROJECT_INDEX.dir
+/home/fenix/pr/work/tft_monitor/cmake-build-esp32doit-devkit-v1/CMakeFiles/PLATFORMIO_UPLOADFS.dir
+/home/fenix/pr/work/tft_monitor/cmake-build-esp32doit-devkit-v1/CMakeFiles/PLATFORMIO_PROGRAM.dir
+/home/fenix/pr/work/tft_monitor/cmake-build-esp32doit-devkit-v1/CMakeFiles/PLATFORMIO_BUILD_DEBUG.dir
+/home/fenix/pr/work/tft_monitor/cmake-build-esp32doit-devkit-v1/CMakeFiles/PLATFORMIO_BUILD_VERBOSE.dir
+/home/fenix/pr/work/tft_monitor/cmake-build-esp32doit-devkit-v1/CMakeFiles/PLATFORMIO_UPDATE_ALL.dir
+/home/fenix/pr/work/tft_monitor/cmake-build-esp32doit-devkit-v1/CMakeFiles/PLATFORMIO_BUILD.dir
+/home/fenix/pr/work/tft_monitor/cmake-build-esp32doit-devkit-v1/CMakeFiles/PLATFORMIO_MONITOR.dir
+/home/fenix/pr/work/tft_monitor/cmake-build-esp32doit-devkit-v1/CMakeFiles/PLATFORMIO_UPLOAD.dir
+/home/fenix/pr/work/tft_monitor/cmake-build-esp32doit-devkit-v1/CMakeFiles/PLATFORMIO_CLEAN.dir
+/home/fenix/pr/work/tft_monitor/cmake-build-esp32doit-devkit-v1/CMakeFiles/PLATFORMIO_DEVICE_LIST.dir
+/home/fenix/pr/work/tft_monitor/cmake-build-esp32doit-devkit-v1/CMakeFiles/PLATFORMIO_TEST.dir
