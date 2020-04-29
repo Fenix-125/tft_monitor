@@ -1,4 +1,0 @@
-/home/fenix/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6494.38/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=esp32doit-devkit-v1 -G "CodeBlocks - Unix Makefiles" /home/fenix/pr/work/tft_monitor
--- Configuring done
--- Generating done
--- Build files have been written to: /home/fenix/pr/work/tft_monitor/cmake-build-esp32doit-devkit-v1
